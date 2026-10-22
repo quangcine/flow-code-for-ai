@@ -6,6 +6,7 @@ Quy trình sáu bước bạn (Claude) làm khi người dùng đưa repo này. 
 
 Mục tiêu: biết người dùng đang có gì, bằng số đếm, ⛔ không đoán.
 - Đọc `~/.claude`: tệp `CLAUDE.md`, thư mục `skills/`, `agents/`, `commands/` nếu có, `settings.json` (hook, quyền).
+- Đọc thư mục `.claude/` ở gốc dự án (`settings.json`, `settings.local.json`, `skills/`, `agents/`, `commands/`) và các plugin đã cài (`/plugin`).
 - Đọc `CLAUDE.md` (hoặc `AGENTS.md`) ở gốc dự án đang mở, và mọi thư mục tài liệu, kế hoạch sẵn có.
 - Đếm bằng lệnh: số skill, số agent, số dòng `CLAUDE.md`, số tệp kế hoạch. Ghi lệnh kèm kết quả.
 - Hỏi người dùng thói quen thật: thường mở mấy phiên cùng lúc, việc hay dở dang ở đâu, từng mất công vì chuyện gì.

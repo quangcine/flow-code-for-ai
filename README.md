@@ -27,8 +27,8 @@ Flow ấy phải mọc ra **từ cấu hình người dùng đang có** (tệp `
 
 1. **⛔ Không chép nguyên.** Tài liệu này mô tả ý; câu chữ cụ thể phải viết lại theo dự án, ngôn ngữ, công cụ của người dùng.
    Vì sao: luật chép nguyên mang theo giả định của nơi khác (tên thư mục, lệnh, tài khoản) và sẽ sai âm thầm.
-2. **Khảo sát trước khi đề xuất.** Đọc `~/.claude` (tệp `CLAUDE.md`, thư mục `skills/`, `agents/`, `settings.json` và hook),
-   `CLAUDE.md` của dự án, các skill, agent đã có. Đếm bằng lệnh, ⛔ không đoán.
+2. **Khảo sát trước khi đề xuất.** Đọc `~/.claude` (tệp `CLAUDE.md`, thư mục `skills/`, `agents/`, `settings.json` và hook), thư mục `.claude/` ở gốc dự án
+   (`settings.json`, `settings.local.json`, `skills/`, `agents/`, `commands/`), các plugin đã cài (`/plugin`), `CLAUDE.md` của dự án, các skill, agent đã có. Đếm bằng lệnh, ⛔ không đoán.
    Vì sao: người dùng thường đã có một nửa flow dưới tên khác; dựng trùng là nuôi hai bản của cùng một việc.
 3. **Hỏi từng câu một bằng `AskUserQuestion`.** Mỗi lượt một câu; trước khi gọi tool, viết vài dòng bối cảnh:
    đang có gì, chỗ hở ở đâu, một ví dụ cụ thể. Mỗi lựa chọn nói rõ được gì, mất gì.
@@ -49,7 +49,7 @@ flowchart TD
   R -.->|"dòng phiên chết, nợ 🔒 kẹt"| H["Hỏi người dùng"]
   R --> Q{"Gõ kèm vai?"}
   Q -->|"leader"| LA{"Có Leader sống?"}
-  Q -->|"không gõ"| LB{"Có Leader sống?"}
+  Q -->|"không gõ"| LB{"Sổ đã có Leader?"}
   Q -->|"planner"| VP["Vai Planner"]
   LA -->|"Không"| VL["Vai Leader"]
   LA -->|"Có"| ASK["Hỏi Leader cũ, chờ 2 phút (bận thì hỏi người dùng)"] --> ALIVE{"Leader cũ còn sống?"}

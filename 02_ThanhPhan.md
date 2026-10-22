@@ -55,7 +55,8 @@ Plan viết xong trông sạch, nhưng thi công thì lộ bước thiếu, con 
 #### Cơ chế
 - Rà nhiều lớp, ⛔ không lớp nào thay lớp nào: logic (mỗi khẳng định đã đo hay đang đoán), đọc trọn để bắt mâu thuẫn,
   đo lại từng con số bằng lệnh, kiểm quy ước (khuôn, link, chữ phủ định ⛔ không rơi mất).
-- Mỗi vòng một agent rà mới, ⛔ không mang thiên kiến của vòng trước; lặp tới khi một vòng ra 0 lỗi.
+- Mỗi vòng một agent rà mới, ⛔ không mang thiên kiến của vòng trước; lặp tới khi một vòng ra 0 lỗi, đặt trần (vd 3 vòng);
+  hết trần mà chưa sạch thì dừng, hỏi người dùng đi tiếp hay xem lại cách viết Plan.
 - Lỗi hình thức, số liệu thì tự sửa; đụng phạm vi, thiết kế thì hỏi người dùng.
 #### Bản tối thiểu
 Một skill liệt kê bốn lớp rà và một khuôn báo lỗi (loại, chỗ, vì sao sai, cách sửa). Chạy tay sau mỗi lần viết Plan.

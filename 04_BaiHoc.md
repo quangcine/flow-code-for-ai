@@ -59,7 +59,7 @@ Ca thật được kể trung tính; con số giữ lại khi chính nó là bà
 - **Chuyện gì xảy ra.** Một Plan đóng gói cấu hình qua năm vòng rà: 26 lỗi, rồi 10, 8, 3, cuối cùng 0.
   Ở nơi khác, vòng 3 vẫn ra 18 lỗi, vòng 6 còn bắt một con số sai gần 7 lần; một câu rơi mất chữ "không" biến cảnh báo thành lời cho phép.
 - **Vì sao.** Mỗi vòng sửa lại đẻ chỗ lệch mới; người rà cũ quen mắt với câu đã đọc.
-- **Luật rút ra.** Lặp tới khi một vòng ra 0 lỗi; đo lại số bằng lệnh; sau khi bác một tiền đề, tìm chính chuỗi đó trên toàn bộ tài liệu.
+- **Luật rút ra.** Lặp tới khi một vòng ra 0 lỗi, có trần (vd 3 vòng), hết trần thì hỏi người dùng đi tiếp hay xem lại cách viết Plan; đo lại số bằng lệnh; sau khi bác một tiền đề, tìm chính chuỗi đó trên toàn bộ tài liệu.
 - **Điều kiện áp dụng.** Plan nhiều bước hoặc chạm nhiều tệp. Plan vài dòng thì một vòng là đủ.
 
 ## 9. Đổi nền dưới một Plan đã duyệt thì trả Plan về rà lại
